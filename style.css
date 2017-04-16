@@ -1,0 +1,23 @@
+html {
+	background-color:#D2D7D3;
+}
+#quote-container {
+	height:350px;
+	width:auto;
+	background-color:#FFFFFF;
+}
+.quoteDiv {
+	border:1px solid black;
+	border-radius:15px;
+	height:100px;
+	width:400px;
+	margin:auto;
+}
+.tweetButton {
+	font-size:30px;
+	display:inline-block;
+	padding-right:100px;
+}
+.quoteButton {
+	display:inline-block;
+}
