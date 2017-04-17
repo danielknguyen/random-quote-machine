@@ -2,22 +2,26 @@ html {
 	background-color:#D2D7D3;
 }
 #quote-container {
-	height:350px;
+	height:auto;
 	width:auto;
 	background-color:#FFFFFF;
 }
 .quoteDiv {
 	border:1px solid black;
 	border-radius:15px;
-	height:100px;
-	width:400px;
+	height:auto;
+	max-width:500px;
 	margin:auto;
+}
+.quote {
+	padding:20px;
 }
 .tweetButton {
 	font-size:30px;
 	display:inline-block;
-	padding-right:100px;
+	padding:20px;
 }
 .quoteButton {
 	display:inline-block;
+	padding:20px;
 }
