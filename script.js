@@ -12,7 +12,7 @@ $(document).ready(function($) {
 	});
 	//tweet on click
 	$(".twitter-share").on('click', function(){
-		window.open("https://twitter.com/intent/tweet" + (".quote").html(data[0].content + " - " + data[0].title))
+		window.open("https://twitter.com/intent/tweet");
 	});
 
   });
