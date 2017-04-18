@@ -1,6 +1,9 @@
 html {
 	background-color:#D2D7D3;
 }
+.rqm-title {
+	font-family:pacifico, san-serif;
+}
 #quote-container {
 	height:auto;
 	width:auto;

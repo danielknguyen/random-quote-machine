@@ -10,26 +10,30 @@
 <body>
 	<!-- Div containing the quote box -->
 	<div id="quote-container" class="container text-center">
-		<h1>Random Quote Machine</h1>
+		<h1 class="rqm-title">Random Quote Machine</h1>
 		<!-- div containing the quotes -->
 		<div class="quoteDiv">
 			<div class="quote">
 			<!--where we will input quotes-->
-			
+
 			</div>
 		</div>
 		<!-- This is the tweet button -->
 		<div class="tweetButton">
-			<i class="fa fa-twitter" aria-hidden="true"></i>
+			<button class="twitter-share btn-primary btn-sm">
+				<i class="fa fa-twitter" aria-hidden="true"></i> Tweet
+			</button>
 		</div>
 		<!-- This is the quote button -->
 		<div class="quoteButton">
-			<button id="getNewQuote" class="btn btn-md">
+			<button id="getNewQuote" class="btn-default btn-lg">
 				<i class="fa fa-paper-plane" aria-hidden="true"></i> New Quote
 			</button>
 		</div>
 	</div>
-	<h5 class="text-center">Written & Coded by Daniel Nguyen</h5>
+	<h5 class="text-center">Written & Coded by 
+		<a class="title="daniel.FCC" target="_blank" href="https://www.freecodecamp.com/danielknguyen">Daniel Nguyen</a>
+	</h5>
 
 	<!-- Link to js file -->
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
