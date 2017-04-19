@@ -18,9 +18,10 @@ $(document).ready(function() {
 				$('#quoteText')
 					.text(quote)
 					.fadeIn('slow');
-				$('#Author')
-					.text('- ' + author)
-					.fadeIn('slow');
+				//Find out why it is coming out as undefined
+				// $('#Author')
+				// 	.text('- ' + author)
+				// 	.fadeIn('slow');
 				$('.quoteDiv')
 					.css('font-family', 'cursive')
 					.css('font-size', '24px')
@@ -33,8 +34,13 @@ $(document).ready(function() {
 	$('#getQuote').on('click', function(){
     	$('#quoteText')
 			.fadeOut('fast');
-		$('#Author')
-			.fadeOut('fast');
+		// $('#Author')
+		// 	.fadeOut('fast');
     	getNewQuote();	
+  	})
+  	//twitter button on click to send quote as a tweet
+  	$('.twitter-share').on('click', function(){
+  		window.open('https://twitter.com/intent/tweet?text= ' + encodeURIComponent(quote)
+  		);
   	})
   });
