@@ -40,7 +40,7 @@ $(document).ready(function() {
   	})
   	//twitter button on click to send quote as a tweet
   	$('.twitter-share').on('click', function(){
-  		window.open('https://twitter.com/intent/tweet?text= ' + encodeURIComponent(quote)
+  		window.open('https://twitter.com/intent/tweet?text= ' + $('#quoteText').text(quote)
   		);
   	})
   });
