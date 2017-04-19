@@ -1,18 +1,28 @@
 $(document).ready(function($) {
-	// elimate storing data
-	$.ajaxSetup ({
-    	cache: false
-  	});
-	// generate new quote function on click
-	$("#getNewQuote").on('click', function(){
-
-		$.getJSON("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&callback=", function(data) {
-    		$(".quote").html(data[0].content + " - " + data[0].title)
-    	});
-	});
-	//tweet on click
-	$(".twitter-share").on('click', function(){
-		window.open("https://twitter.com/intent/tweet");
-	});
-
+	var quote;
+	var author;
+	//creating a function to generate quote
+	function getNewQuote(){
+		$.ajax({
+			url: 'http://api.forismatic.com/api/1.0/',
+			jsonp: 'jsonp',
+			dataType: 'jsonp',
+			data: {
+				method: 'getQuote',
+				format: 'jsonp',
+				lang: 'en',
+			},
+			success: function(quote){
+				quote = quote.quoteText;
+				author = quote.quoteAuthor;
+				$('#quoteText').text(quote);
+				$('#quoteAuthor').text(author);
+			}
+		});
+	};
+	getNewQuote();
+	//button on click to grab new quote
+	$('#getQuote').on('click', function(){
+    	getNewQuote();
+  	})
   });
