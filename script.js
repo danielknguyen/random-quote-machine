@@ -15,14 +15,26 @@ $(document).ready(function() {
 			success: function(quote){
 				quote = quote.quoteText;
 				author = quote.quoteAuthor;
-				$('#quoteText').text(quote);
-				$('#Author').text('- ' + author);
+				$('#quoteText')
+					.text(quote)
+					.fadeIn('slow');
+				$('#Author')
+					.text('- ' + author)
+					.fadeIn('slow');
+				$('.quoteDiv')
+					.css('font-family', 'cursive')
+					.css('font-size', '24px')
+					.css('background-color', '#ECECEC');
 			}
 		});
 	};
 	getNewQuote();
 	//button on click to grab new quote
 	$('#getQuote').on('click', function(){
+    	$('#quoteText')
+			.fadeOut('fast');
+		$('#Author')
+			.fadeOut('fast');
     	getNewQuote();	
   	})
   });
