@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+$(document).ready(function() {
 	var quote;
 	var author;
 	//creating a function to generate quote
@@ -16,13 +16,13 @@ $(document).ready(function($) {
 				quote = quote.quoteText;
 				author = quote.quoteAuthor;
 				$('#quoteText').text(quote);
-				$('#quoteAuthor').text(author);
+				$('#Author').text('- ' + author);
 			}
 		});
 	};
 	getNewQuote();
 	//button on click to grab new quote
 	$('#getQuote').on('click', function(){
-    	getNewQuote();
+    	getNewQuote();	
   	})
   });
