@@ -29,6 +29,17 @@ $(document).ready(function() {
 			}
 		});
 	};
+	//randomColor CSS function
+	// function randomColor () {
+	// 	var colorAtRandom;
+	// 	var colors = {
+	// 		name: ['silver', 'white', 'maroon', 'olive', 'yellow', 'teal', 'aqua', 'fuchsia'],
+	// 		hex: ['#C0C0C0', '#FFFFFF', '#800000','#808000', '#FFFF00', '#008080', '#00FFFF', '#FF00FF']
+	// 	}
+	// 	colorAtRandom = Math.floor(Math.random() * colors.hex.length);
+	// 	newColor = colors.hex[colorAtRandom];
+	// 	$('.quoteDiv').css('background-color', 'newColor');
+	// };
 	getNewQuote();
 	//button on click to grab new quote
 	$('#getQuote').on('click', function(){
@@ -36,11 +47,12 @@ $(document).ready(function() {
 			.fadeOut('fast');
 		// $('#Author')
 		// 	.fadeOut('fast');
-    	getNewQuote();	
+    	getNewQuote();
+    	// randomColor();	
   	})
   	//twitter button on click to send quote as a tweet
   	$('.twitter-share').on('click', function(){
-  		window.open('https://twitter.com/intent/tweet?text= ' + $('#quoteText').text(quote)
+  		window.open('https://twitter.com/intent/tweet?text= ' + $('#quoteText').text(quote) + encodeURIComponent('#quotesForDays')
   		);
   	})
   });
