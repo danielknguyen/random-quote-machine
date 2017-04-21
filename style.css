@@ -27,3 +27,15 @@ html {
 	display:inline-block;
 	padding:20px;
 }
+.sm-links {
+	font-size: 32px;
+}
+.fa-linkedin-square {
+	color: #000000;
+}
+.fa-free-code-camp {
+	color: #18F20C;
+}
+.fa-github-alt {
+	color: #740CF2;
+}

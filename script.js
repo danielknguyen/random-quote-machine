@@ -1,29 +1,14 @@
 $(document).ready(function() {
 	var quote;
-	var author;
-	var quoteIcon = 'http://fontawesome.io/icon/quote-left/';
 	//creating a function to generate quote
 	function getNewQuote(){
 		$.ajax({
-			url: 'http://api.forismatic.com/api/1.0/',
-			jsonp: 'jsonp',
-			dataType: 'jsonp',
-			crossDomain:true,
-			data: {
-				method: 'getQuote',
-				format: 'jsonp',
-				lang: 'en',
-			},
+			url: 'https://random-quote-generator.herokuapp.com/api/quotes/random',
 			success: function(quote){
-				quote = quote.quoteText;
-				author = quote.quoteAuthor;
+				quote = quote.quote + " - " + quote.author;
 				$('#quoteText')
 					.text(quote)
 					.fadeIn('slow');
-				//Find out why it is coming out as undefined
-				// $('#Author')
-				// 	.text('- ' + author)
-				// 	.fadeIn('slow');
 				$('.quoteDiv')
 					.css('font-family', 'cursive')
 					.css('font-size', '24px')
@@ -48,17 +33,15 @@ $(document).ready(function() {
 	$('#getQuote').on('click', function(){
     	$('#quoteText')
 			.fadeOut('slow');
-		// $('#Author')
-		// 	.fadeOut('fast');
     	$('.quoteDiv')
-    	.css('background-color', randomColor())
-    	.fadeOut('slow');
+    		.css('background-color', randomColor())
+    		.fadeOut('slow');
 
     	getNewQuote();	
   	})
   	//twitter button on click to send quote as a tweet
   	$('.twitter-share').on('click', function(){
-  		window.open('https://twitter.com/intent/tweet?text= ' + $('#quoteText').text(quote) + encodeURIComponent('#quotesForDays')
+  		window.open('https://twitter.com/intent/tweet?text= ' + $('#quoteText').text(quote) + " " + encodeURIComponent('#quotesForDays')
   		);
   	})
   });
