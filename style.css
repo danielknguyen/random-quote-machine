@@ -6,7 +6,8 @@ html {
 	font-weight:bold;
 }
 #quote-container {
-	height:auto;
+	margin:3%;
+	height:60%;
 	width:auto;
 	background-color:#FFFFFF;
 }

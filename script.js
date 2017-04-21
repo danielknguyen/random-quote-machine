@@ -1,6 +1,7 @@
 $(document).ready(function() {
 	var quote;
 	var author;
+	var quoteIcon = 'http://fontawesome.io/icon/quote-left/';
 	//creating a function to generate quote
 	function getNewQuote(){
 		$.ajax({
@@ -25,30 +26,34 @@ $(document).ready(function() {
 				$('.quoteDiv')
 					.css('font-family', 'cursive')
 					.css('font-size', '24px')
-					.css('background-color', '#ECECEC');
+					.css('background-color', randomColor())
+					.fadeIn('slow');
 			}
 		});
 	};
-	//randomColor CSS function
-	// function randomColor () {
-	// 	var colorAtRandom;
-	// 	var colors = {
-	// 		name: ['silver', 'white', 'maroon', 'olive', 'yellow', 'teal', 'aqua', 'fuchsia'],
-	// 		hex: ['#C0C0C0', '#FFFFFF', '#800000','#808000', '#FFFF00', '#008080', '#00FFFF', '#FF00FF']
-	// 	}
-	// 	colorAtRandom = Math.floor(Math.random() * colors.hex.length);
-	// 	newColor = colors.hex[colorAtRandom];
-	// 	$('.quoteDiv').css('background-color', 'newColor');
-	// };
+	// randomColor CSS function
+	function randomColor () {
+		var colorAtRandom;
+		var colors = {
+			name: ['silver', 'white', 'red', 'meadow', 'yellow', 'teal', 'aqua', 'fuchsia'],
+			hex: ['#C0C0C0', '#FFFFFF', '#EC644B','#1BBC9B', '#FFFF00', '#008080', '#00FFFF', '#FF00FF']
+		}
+		colorAtRandom = Math.floor(Math.random() * colors.hex.length);
+		newColor = colors.hex[colorAtRandom];
+		return newColor;
+	};
 	getNewQuote();
-	//button on click to grab new quote
+	//button on click to grab new quote and change background color
 	$('#getQuote').on('click', function(){
     	$('#quoteText')
-			.fadeOut('fast');
+			.fadeOut('slow');
 		// $('#Author')
 		// 	.fadeOut('fast');
-    	getNewQuote();
-    	// randomColor();	
+    	$('.quoteDiv')
+    	.css('background-color', randomColor())
+    	.fadeOut('slow');
+
+    	getNewQuote();	
   	})
   	//twitter button on click to send quote as a tweet
   	$('.twitter-share').on('click', function(){
