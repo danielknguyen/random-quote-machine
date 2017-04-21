@@ -8,6 +8,7 @@ $(document).ready(function() {
 			url: 'http://api.forismatic.com/api/1.0/',
 			jsonp: 'jsonp',
 			dataType: 'jsonp',
+			crossDomain:true,
 			data: {
 				method: 'getQuote',
 				format: 'jsonp',
