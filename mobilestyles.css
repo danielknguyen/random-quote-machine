@@ -5,8 +5,11 @@
 	font-size:5em;
 	margin:5% 0;
 }
+.quoteDiv {
+	max-width:1000px;
+}
 #quoteText {
-	font-size:1.5em;	
+	font-size:2em;	
 }
 .quoteButton {
 	margin-top: 2vh;
