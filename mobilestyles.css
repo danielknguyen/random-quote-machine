@@ -1,0 +1,26 @@
+#quote-container {
+	margin-top:10vh;
+}
+.rqm-title {
+	font-size:5em;
+	margin:5% 0;
+}
+#quoteText {
+	font-size:1.5em;	
+}
+.quoteButton {
+	margin-top: 2vh;
+}
+.twitter-share {
+	font-size:1em;
+}
+#getQuote {
+	font-size:2.5em;
+}
+.createdBy {
+	font-size:2em;
+}
+.fa-linkedin-square, .fa-free-code-camp, .fa-github-alt {
+	font-size:1.5em;
+	margin-top: 1.5vh;
+}
