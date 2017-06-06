@@ -10,7 +10,7 @@ $(document).ready(function() {
 					.text(quote)
 					.fadeIn('slow');
 				$('.quoteDiv')
-					.css('font-family', 'Lobster')
+					.css('font-family', 'Courgette', 'cursive')
 					.css('font-size', '24px')
 					.css('background-color', randomColor())
 					.fadeIn('slow');

@@ -1,9 +1,7 @@
-html {
-	background-color:#22313F;
-}
 .rqm-title {
 	font-family:pacifico, san-serif;
 	font-weight:bold;
+	margin:2.5% auto;
 }
 #quote-container {
 	margin:3%;
@@ -15,7 +13,7 @@ html {
 	border-radius:15px;
 	height:auto;
 	max-width:500px;
-	margin:auto;
+	margin: 0 auto;
 	padding:25px;
 }
 .tweetButton {
@@ -38,4 +36,7 @@ html {
 }
 .fa-github-alt {
 	color: #740CF2;
+}
+.quotation-icon {
+	font-size:1.5em;
 }
